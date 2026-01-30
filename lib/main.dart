@@ -51,7 +51,7 @@ class _MyCVPageState extends State<MyCVPage> {
             child: Text(
               text,
               textAlign: TextAlign.left,
-              style: TextStyle(fontSize: isMobileLayout(context) ? 13 : 16),
+              style: TextStyle(fontSize: isMobileLayout(context) ? 14 : 16),
             ),
           ),
         ],
@@ -72,6 +72,7 @@ class _MyCVPageState extends State<MyCVPage> {
         // Icon + vertical line
         Column(
           children: [
+            SizedBox(height: 5),
             Icon(
               icon,
               color: Colors.teal,
@@ -100,7 +101,7 @@ class _MyCVPageState extends State<MyCVPage> {
                     year,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: isMobileLayout(context) ? 12 : 14,
+                      fontSize: isMobileLayout(context) ? 14 : 16,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -108,14 +109,14 @@ class _MyCVPageState extends State<MyCVPage> {
                     title,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: isMobileLayout(context) ? 13 : 15,
+                      fontSize: isMobileLayout(context) ? 14 : 18,
                     ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
                     style: TextStyle(
-                      fontSize: isMobileLayout(context) ? 11 : 13,
+                      fontSize: isMobileLayout(context) ? 14 : 16,
                       color: Colors.grey[700],
                     ),
                   ),
@@ -166,11 +167,11 @@ class _MyCVPageState extends State<MyCVPage> {
                     const SizedBox(height: 16),
 
                     // Name
-                    const Text(
+                    Text(
                       'KHUN BUNHAP',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: isMobileLayout(context) ? 20 : 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -180,14 +181,20 @@ class _MyCVPageState extends State<MyCVPage> {
                     // Title
                     Text(
                       '4th Year Telecommunications & Networks Engineering',
-                      style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+                      style: TextStyle(
+                        fontSize: isMobileLayout(context) ? 14 : 16,
+                        color: Colors.grey[700],
+                      ),
                     ),
 
                     const SizedBox(height: 6),
 
                     Text(
                       'Institute of Technology of Cambodia',
-                      style: TextStyle(fontSize: 13, color: Colors.grey[700]),
+                      style: TextStyle(
+                        fontSize: isMobileLayout(context) ? 14 : 16,
+                        color: Colors.grey[700],
+                      ),
                     ),
 
                     const SizedBox(height: 20),
@@ -203,7 +210,7 @@ class _MyCVPageState extends State<MyCVPage> {
 
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                              fontSize: isMobileLayout(context) ? 14 : 16,
                             ),
                           ),
                         ],
@@ -265,13 +272,13 @@ class _MyCVPageState extends State<MyCVPage> {
                     const SizedBox(height: 20),
                     const Divider(thickness: 1),
 
-                    const Align(
+                    Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'INFO',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: isMobileLayout(context) ? 14 : 16,
                         ),
                       ),
                     ),
@@ -333,13 +340,18 @@ class _MyCVPageState extends State<MyCVPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('''
+                              Text(
+                                '''
 I am a fourth-year student at the Institute of Technology of Cambodia (ITC), major in Telecommunications and Networks Engineering (GTR). I have a strong interests in learning about technology innovations and I am eager to put my knowledge into the real-world scenarios.
 
 Throughout my studies, I have gained hands-on experience with microcontrollers (Arduino), basic IoT systems (ESP32), and software development (Flutter). I particularly enjoy working on software-related projects, as they allow me to be creative and solve problems effectively.
 
 I am enthusiastic about learning new things and taking on challenges that will help me to grow both personally and professionally.	
-''', style: TextStyle(fontSize: 14)),
+''',
+                                style: TextStyle(
+                                  fontSize: isMobileLayout(context) ? 14 : 18,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -398,15 +410,95 @@ I am enthusiastic about learning new things and taking on challenges that will h
                               Wrap(
                                 spacing: 8,
                                 runSpacing: 8,
-                                children: const [
-                                  Chip(label: Text('Flutter & Dart')),
-                                  Chip(label: Text('C/C++, Python, Java')),
-                                  Chip(label: Text('Time Management')),
-                                  Chip(label: Text('Problem Solving')),
-                                  Chip(label: Text('Analytical Thinking')),
-                                  Chip(label: Text('Data Structures')),
-                                  Chip(label: Text('MS Word')),
-                                  Chip(label: Text('MS Excel')),
+                                children: [
+                                  Chip(
+                                    label: Text(
+                                      'Flutter & Dart',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'C/C++, Python, Java',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Time Management',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Problem Solving',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Analytical Thinking',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Data Structures',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'MS Word',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'MS Excel',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
                                 ],
                               ),
                               const SizedBox(height: 20),
@@ -422,11 +514,51 @@ I am enthusiastic about learning new things and taking on challenges that will h
                               Wrap(
                                 spacing: 8,
                                 runSpacing: 8,
-                                children: const [
-                                  Chip(label: Text('Networking Fundamentals')),
-                                  Chip(label: Text('Network Components')),
-                                  Chip(label: Text('Protocols & Standards')),
-                                  Chip(label: Text('Microcontrollers')),
+                                children: [
+                                  Chip(
+                                    label: Text(
+                                      'Networking Fundamentals',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Network Components',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Protocols & Standards',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
+                                  Chip(
+                                    label: Text(
+                                      'Microcontrollers',
+                                      style: TextStyle(
+                                        fontSize: isMobileLayout(context)
+                                            ? 14
+                                            : 16,
+                                      ),
+                                    ),
+                                    backgroundColor: Colors.teal[100],
+                                  ),
                                 ],
                               ),
                             ],
@@ -465,8 +597,8 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: isMobileLayout(context)
-                                                ? 14
-                                                : 16,
+                                                ? 16
+                                                : 18,
                                           ),
                                         ),
                                       ),
@@ -494,7 +626,7 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                           Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: const [
+                                            children: [
                                               Icon(
                                                 Icons.check_circle_outline,
                                                 size: 16,
@@ -505,7 +637,10 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                 child: Text(
                                                   'Actively participating in a lab innovation project creating a sensor prototype that sends data to the cloud and can be controlled remotely.',
                                                   style: TextStyle(
-                                                    fontSize: 13,
+                                                    fontSize:
+                                                        isMobileLayout(context)
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
@@ -515,7 +650,7 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                           Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: const [
+                                            children: [
                                               Icon(
                                                 Icons.check_circle_outline,
                                                 size: 16,
@@ -526,7 +661,10 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                 child: Text(
                                                   'Learning about cloud protocols (HTTP, MQTT) and wireless sensor networks.',
                                                   style: TextStyle(
-                                                    fontSize: 13,
+                                                    fontSize:
+                                                        isMobileLayout(context)
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
@@ -536,7 +674,7 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                           Row(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: const [
+                                            children: [
                                               Icon(
                                                 Icons.check_circle_outline,
                                                 size: 16,
@@ -547,7 +685,10 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                 child: Text(
                                                   'Hands-on experience with sensor integration, cloud connectivity, and remote device control.',
                                                   style: TextStyle(
-                                                    fontSize: 13,
+                                                    fontSize:
+                                                        isMobileLayout(context)
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
@@ -574,8 +715,8 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: isMobileLayout(context)
-                                                ? 14
-                                                : 16,
+                                                ? 16
+                                                : 18,
                                           ),
                                         ),
                                       ),
@@ -615,8 +756,8 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                   style: TextStyle(
                                                     fontSize:
                                                         isMobileLayout(context)
-                                                        ? 13
-                                                        : 15,
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
@@ -639,8 +780,8 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                   style: TextStyle(
                                                     fontSize:
                                                         isMobileLayout(context)
-                                                        ? 13
-                                                        : 15,
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
@@ -663,8 +804,8 @@ I am enthusiastic about learning new things and taking on challenges that will h
                                                   style: TextStyle(
                                                     fontSize:
                                                         isMobileLayout(context)
-                                                        ? 13
-                                                        : 15,
+                                                        ? 14
+                                                        : 18,
                                                   ),
                                                 ),
                                               ),
